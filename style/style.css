@@ -1,0 +1,55 @@
+h1 {
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+}
+
+.form-container {
+    margin: 1% auto;
+    max-width: 70%;
+    border: 2px solid rgba(0, 0, 0, 0.801);
+    border-radius: 8px;
+    background-color: lightblue;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 15px 15px;
+    padding: 50px 60px;
+}
+
+label {
+    text-align: right;
+    justify-self: end;
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    color: black;
+    white-space: nowrap;
+}
+
+.form-grid input {
+    padding: 10px;
+    background-color: white;
+}
+
+.form-grid input[type="text"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.form-grid select {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+}
+
+.form-grid option {
+    border: 5px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+}
