@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Test</title>
+</head>
+
+<body>
+    <form id="requestForm" class="form-container">
+        <h1>Запрос сведений о страховом стаже</h1>
+        <div class="form-grid">
+
+            <label for="lastName"> Фамилия *</label>
+            <input type="text" id="lastName" maxlength="40" minlength="1" required>
+
+            <label for="firstName"> Имя *</label>
+            <input type="text" id="firstName" maxlength="40" minlength="1" required>
+
+            <label for="middleName"> Отчество </label>
+            <input type="text" id="middleName" maxlength="40">
+
+            <label for="snils"> СНИЛС*</label>
+            <input type="text" id="snils" pattern="\d{3}-\d{3}-\d{3} \d{2}" required>
+
+            <label for="birthDate"> Дата рождения*</label>
+            <input type="text" id="birthDate" pattern="\d{2}.\d{2}.\d{4}" required>
+
+            <label for="availableData"> Наличие данных*</label>
+            <select id="availableData" name="availableData" required>
+                <option value="" disabled selected></option>
+                <option value="Да">Да</option>
+                <option value="Нет">Нет</option>
+
+            </select>
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>
