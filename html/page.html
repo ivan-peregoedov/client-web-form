@@ -15,10 +15,10 @@
         <div class="form-grid">
 
             <label for="lastName"> Фамилия *</label>
-            <input type="text" id="lastName" maxlength="40" minlength="1" required>
+            <input type="text" id="lastName" minlength="1" maxlength="40" required>
 
             <label for="firstName"> Имя *</label>
-            <input type="text" id="firstName" maxlength="40" minlength="1" required>
+            <input type="text" id="firstName" minlength="1" maxlength="40" required>
 
             <label for="middleName"> Отчество </label>
             <input type="text" id="middleName" maxlength="40">
@@ -36,6 +36,23 @@
                 <option value="Нет">Нет</option>
 
             </select>
+        </div>
+
+        <h1>Общая продолжительность страхового стажа на дату обращения гражданина</h1>
+
+        <div class="form-grid">
+            <label for="years"> Общая продолжительность страхового стажа лет</label>
+            <input type="text" id="years" min="0" max="999" required>
+
+            <label for="months"> Общая продолжительность страхового стажа месяцев</label>
+            <input type="text" id="months" min="0" max="99" required>
+
+            <label for="days"> Общая продолжительность страхового стажа дней</label>
+            <input type="text" id="days" min="0" max="99" required>
+
+
+            <input type="submit" value="Сохранить">
+
         </div>
 
     </form>
