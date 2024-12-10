@@ -4,7 +4,6 @@ body {
 
 h1 {
     font-size: 20px;
-    /* margin-top: 20px; */
     background-color: deepskyblue;
     padding: 15px;
     text-align: center;
@@ -36,21 +35,21 @@ h3 {
 label {
     text-align: right;
     justify-self: end;
-    /* padding: 0 0 0 10px; */
     font-size: 18px;
     color: black;
-    /* white-space; */
 }
 
 .form-grid input {
     padding: 10px;
     background-color: white;
+    font-size: 18px;
 }
 
-.form-grid input[type="text"] {
+.form-grid input[type="text"],
+.form-grid input[type="number"] {
+    background-color: white;
     border: 1px solid black;
     border-radius: 4px;
-    font-size: 18px;
 }
 
 .form-grid select {
@@ -62,9 +61,15 @@ label {
     padding: 10px;
 }
 
-.form-grid option {
-    border: 5px solid black;
-    border-radius: 4px;
+.no-wrap-label {
+    padding-top: 7px;
+}
+
+.form-container p {
+    color: red;
+    text-align: right;
+    padding-right: 2%;
+    margin: 2px 0 2% auto;
     font-size: 18px;
 }
 
@@ -80,4 +85,18 @@ input[type="submit"] {
     font-size: 18px;
     background-color: darkgreen;
     color: white;
+}
+
+.form-container textarea {
+    display: block;
+    margin: 1% auto 2% auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: #fff;
+    max-width: 90%;
+    min-width: 75%;
+    max-height: 400px;
+    min-height: 400px;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Test</title>
+    <title>Форма запроса</title>
 </head>
 
 <body>
@@ -14,20 +14,20 @@
         <h1>Запрос сведений о страховом стаже</h1>
         <div class="form-grid">
 
-            <label for="lastName"> Фамилия *</label>
+            <label for="lastName" class="no-wrap-label"> Фамилия *</label>
             <input type="text" id="lastName" minlength="1" maxlength="40" required>
 
-            <label for="firstName"> Имя *</label>
+            <label for="firstName" class="no-wrap-label"> Имя *</label>
             <input type="text" id="firstName" minlength="1" maxlength="40" required>
 
-            <label for="middleName"> Отчество </label>
+            <label for="middleName" class="no-wrap-label"> Отчество </label>
             <input type="text" id="middleName" maxlength="40">
 
-            <label for="snils"> СНИЛС*</label>
-            <input type="text" id="snils" pattern="\d{3}-\d{3}-\d{3} \d{2}" required>
+            <label for="snils" class="no-wrap-label"> СНИЛС*</label>
+            <input type="text" id="snils" placeholder="XXX-XXX-XXX XX" pattern="\d{3}-\d{3}-\d{3} \d{2}" required>
 
             <label for="birthDate"> Дата рождения*</label>
-            <input type="text" id="birthDate" pattern="\d{2}.\d{2}.\d{4}" required>
+            <input type="text" id="birthDate" placeholder="дд.мм.гггг" pattern="\d{2}.\d{2}.\d{4}" required>
 
             <label for="availableData"> Наличие данных*</label>
             <select id="availableData" name="availableData" required>
@@ -42,25 +42,24 @@
 
         <div class="form-grid">
             <label for="years"> Общая продолжительность страхового стажа лет</label>
-            <input type="text" id="years" min="0" max="999" required>
+            <input type="number" id="years" min="0" max="999">
 
             <label for="months"> Общая продолжительность страхового стажа месяцев</label>
-            <input type="text" id="months" min="0" max="99" required>
+            <input type="number" id="months" min="0" max="99">
 
             <label for="days"> Общая продолжительность страхового стажа дней</label>
-            <input type="text" id="days" min="0" max="99" required>
-
-
+            <input type="number" id="days" min="0" max="99">
 
         </div>
+        <p>* - обязательные поля</p>
         <input type="submit" value="Сохранить">
 
         <h3>Итоговый запрос: </h3>
-        <div></div>
+        <textarea id="result" rows="10" cols="50" readonly></textarea>
     </form>
 
-
-
+    <script src="https://unpkg.com/imask"></script>
+    <script src="../js/script.js" defer></script>
 </body>
 
 </html>
